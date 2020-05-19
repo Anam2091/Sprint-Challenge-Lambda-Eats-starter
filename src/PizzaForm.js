@@ -87,7 +87,7 @@ const handleSubmit = event => {
 
 return(
 <div>
- <form onSubmit={event => handleSubmit(event)}>>
+ <form onSubmit={event => handleSubmit(event)}>
 
      <label>
          Name:
