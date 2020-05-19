@@ -40,14 +40,16 @@ const handleNameChange = e => {
       .then(valid => {
         setErrors({
           ...errors,
-          [e.target.name]: ""
+          Name: ""
         });
       })
       .catch(err => {
-        setErrors({
-          ...errors,
-          Name: err?.errors[0]
-        });
+        if(err){
+          setErrors({
+            ...errors,
+            Name: err.errors[0]
+          });
+        }
       });
 }
 
